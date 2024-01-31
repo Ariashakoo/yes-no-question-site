@@ -1,0 +1,82 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header, footer {
+  padding: 20px;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #444;
+  text-shadow: 2px 2px 4px #999;
+}
+
+main {
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px auto;
+}
+
+button {
+  background-color: #008CBA; /* Blue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #007B9A; /* Darker blue */
+  box-shadow: 0px 0px 10px 0px rgba(0,123,154,0.5);
+}
+
+#quiz-form div {
+  margin-bottom: 0px;
+}
+
+#quiz-form p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#quiz-form label {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Add styles for radio buttons */
+#quiz-form input[type="radio"] {
+  margin: 0 10px 0 5px;
+}
+
+#quiz-form input[type="radio"]:checked:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #008CBA;
+}
