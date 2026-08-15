@@ -122,5 +122,5 @@ For any questions or suggestions, please open an issue on GitHub or reach out to
 
 Enjoy discovering which historical figure matches your personality!
 
-[![JavaScript Version](https://img.shields.io/badge/JavaScript-Version-007EC6?style=for-the-badge&logo=javascript)](./project_1/)
-[![PHP Version](https://img.shields.io/badge/PHP-Version-007EC6?style=for-the-badge&logo=php)](./Project%20main/)
+[![JavaScript Version](https://img.shields.io/badge/JavaScript_Version-007EC6?style=for-the-badge&logo=javascript&logoColor=white)](./project_1/)
+[![PHP Version](https://img.shields.io/badge/PHP_Version-007EC6?style=for-the-badge&logo=php&logoColor=white)](./Project%20main/)
