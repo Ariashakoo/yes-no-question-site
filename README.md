@@ -122,7 +122,3 @@ For any questions or suggestions, please open an issue on GitHub or reach out to
 
 Enjoy discovering which historical figure matches your personality!
 
-[![JavaScript](https://img.shields.io/badge/JavaScript-007EC6?style=flat-square&logo=javascript&logoColor=white)](./project_1/)
-[![PHP](https://img.shields.io/badge/PHP-007EC6?style=flat-square&logo=php&logoColor=white)](./Project%20main/)
-[![HTML](https://img.shields.io/badge/HTML-007EC6?style=flat-square&logo=html5&logoColor=white)](https://github.com/Ariashakoo/yes-no-question-site)
-[![CSS](https://img.shields.io/badge/CSS-007EC6?style=flat-square&logo=css3&logoColor=white)](https://github.com/Ariashakoo/yes-no-question-site)
