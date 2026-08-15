@@ -1,14 +1,99 @@
+# Historical Figure Personality Quiz
 
-# Yes No Question Site
+A modern, professional web application that determines which historical figure you most resemble based on your answers to 10 thought-provoking questions.
 
-A personality quiz application that determines which historical figure you most resemble based on your answers to 10 yes/no questions. The project includes two implementations: a PHP version and a JavaScript version.
+## ✨ Features
 
-## How It Works
+### Modern UI/UX
+- **Beautiful gradient design** with dark theme
+- **Smooth animations** and transitions
+- **Responsive layout** - works on all devices
+- **Accessible** - keyboard navigation and screen reader support
+- **Progress tracking** with visual progress bar
 
-The quiz presents you with 10 questions that explore your values, beliefs, and preferences. Each "Yes" answer is recorded as `1` and each "No" as `0`, forming a 10-character binary string (e.g., `1101000000`). This string is then matched against a predefined database of historical figures.
+### Technical Improvements
+- **ES6+ JavaScript** with modern design patterns
+- **Module Pattern** for encapsulation
+- **Observer Pattern** for state management
+- **Factory Pattern** for result calculation
+- **Clean separation of concerns** (MVC-like architecture)
+- **No external dependencies** - pure vanilla JavaScript
 
-The quiz questions touch on themes such as:
+### Enhanced Functionality
+- **Welcome screen** with instructions
+- **Question-by-question navigation** (Previous/Next)
+- **Answer validation** before proceeding
+- **Result matching** with Hamming distance algorithm for closest matches
+- **Share functionality** (Web Share API + clipboard fallback)
+- **Toast notifications** for user feedback
+- **Keyboard shortcuts** for power users
 
+## 🚀 Quick Start
+
+### Using the New Version (Recommended)
+
+1. Navigate to the `src` folder:
+   ```bash
+   cd src
+   ```
+
+2. Open `index.html` in your browser:
+   ```bash
+   # On macOS
+   open index.html
+   
+   # On Windows
+   start index.html
+   
+   # On Linux
+   xdg-open index.html
+   ```
+
+3. Or simply drag and drop `index.html` into your browser.
+
+### Legacy Versions
+
+The repository also contains two legacy implementations:
+
+- **`project_1/`** - Simple JavaScript version (single page)
+- **`Project main/`** - PHP version (requires server)
+
+## 📁 Project Structure
+
+```
+/workspace/
+├── README.md                 # This file
+├── src/                      # ✨ NEW: Modern Professional Version
+│   ├── index.html           # Main HTML file
+│   ├── styles/
+│   │   └── main.css         # Complete CSS with variables
+│   ├── js/
+│   │   └── app.js           # Modern ES6+ JavaScript
+│   └── assets/              # For future assets
+├── project_1/               # Legacy: Simple JavaScript version
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+└── Project main/            # Legacy: PHP version
+    ├── index (1).html
+    ├── process.php
+    └── style.css
+```
+
+## 🎯 How It Works
+
+1. **Answer 10 Questions**: Each "Yes" answer is recorded as `1` and each "No" as `0`, forming a 10-character binary string.
+
+2. **Binary Matching**: Your answer string is matched against our database of historical figures.
+
+3. **Smart Results**: 
+   - **Exact match**: Shows the perfect historical figure match
+   - **Close match**: Uses Hamming distance algorithm to find the most similar figure
+   - **No match**: Displays a friendly message about your unique personality
+
+## 🧠 Quiz Topics
+
+The quiz explores themes such as:
 - Racial and religious preferences
 - Belief in equality
 - Attitudes toward land ownership and cultural expansion
@@ -16,109 +101,72 @@ The quiz questions touch on themes such as:
 - Learning from past mistakes
 - Personal happiness
 
-Based on your unique combination of answers, the system reveals which historical figure shares your personality profile—or tells you that you have "NO PERSONALITY" if no match is found.
+## 🎨 Design Patterns Used
 
-## Project Structure
+| Pattern | Implementation | Benefit |
+|---------|---------------|---------|
+| **Module Pattern** | `QuizApp` IIFE | Encapsulation, clean global namespace |
+| **Observer Pattern** | `QuizState` class | Reactive state management |
+| **Factory Pattern** | `ResultCalculator` class | Centralized result logic |
+| **Singleton Pattern** | State management | Single source of truth |
 
-The repository contains two separate implementations:
+## ⌨️ Keyboard Shortcuts
 
-### 1. `Project main/` — PHP Version
+| Key | Action |
+|-----|--------|
+| `←` / `H` | Previous question |
+| `→` / `L` | Next question |
+| `1` / `Y` | Select "Yes" |
+| `2` / `N` | Select "No" |
+| `Enter` | Confirm/Next |
 
-| File | Description |
-|------|-------------|
-| `index (1).html` | The quiz interface with 10 questions |
-| `process.php` | Backend logic that processes answers and determines the matching historical figure |
-| `style.css` | Styling for the quiz interface |
+## 🔧 Technologies Used
 
-> Note: This version uses PHP for server-side processing. If you're running it locally, you'll need a PHP environment like XAMPP. However, the PHP file may not run correctly in all XAMPP setups.
+### New Version (`src/`)
+- **HTML5** - Semantic markup
+- **CSS3** - Custom properties, flexbox, grid, animations
+- **Vanilla JavaScript (ES6+)** - Classes, modules, arrow functions
+- **Web APIs** - Clipboard API, Web Share API
 
-### 2. `project_1/` — JavaScript Version
+### Legacy Versions
+- **PHP** - Server-side processing (Project main)
+- **JavaScript (ES5)** - Client-side logic (project_1)
+- **jQuery** - DOM manipulation (Project main)
 
-| File | Description |
-|------|-------------|
-| `index.html` | The quiz interface |
-| `script.js` | Client-side JavaScript logic (processing happens in the browser) |
-| `style.css` | Styling for the JavaScript version |
+## 🌐 Browser Support
 
-> This version runs entirely in the browser, making it easier to test and deploy without a server.
+The new version supports all modern browsers:
+- Chrome 80+
+- Firefox 75+
+- Safari 13+
+- Edge 80+
 
-## Live Demo
-
-A live preview of the project is available at:  
-[https://astroplus.ir/project/](https://astroplus.ir/project/)
-
-> Note: The live site may be temporarily unavailable.
-
-## Technologies Used
-
-- **HTML5** — Structure and content
-- **CSS3** — Styling and responsive design
-- **PHP** — Server-side logic (Project main)
-- **JavaScript** — Client-side logic (project_1)
-
-## How to Run Locally
-
-### For the JavaScript version (`project_1/`):
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Ariashakoo/yes-no-question-site.git
-   ```
-2. Navigate to the `project_1/` folder:
-   ```bash
-   cd yes-no-question-site/project_1
-   ```
-3. Open `index.html` in your browser.
-
-### For the PHP version (`Project main/`):
-1. Make sure you have XAMPP (or any PHP-enabled server) installed.
-2. Place the `Project main/` folder in your server's root directory (e.g., `htdocs/` for XAMPP).
-3. Start Apache and MySQL (if required).
-4. Access the project via `http://localhost/Project%20main/` in your browser.
-
-> Troubleshooting: If the PHP file doesn't run properly in XAMPP, try using the JavaScript version instead, or deploy to a live server.
-
-## Matching Logic
-
-The PHP version uses the following mapping of binary strings to historical figures:
-
-| Binary String | Historical Figure |
-|---------------|-------------------|
-| `1101000000` | Adolf Hitler |
-| `1000100000` | Xerxes |
-| `1000000000` | Sadegh Hedayat |
-| `0011100000` | Cyrus the Great / Ferdowsi |
-| `0011101000` | Cambyses |
-| `0010010000` | Anthony of Rome |
-| `0010000000` | Louis the Pious |
-| `0000001000` | Joseph Stalin |
-| `0000000001` | Osama bin Laden |
-| `1111100000` | Julius Caesar |
-| `1111111100` | Cleopatra |
-| `0101100100` | Joan of Arc |
-| `0000100100` | Leonardo da Vinci |
-| `0100101000` | William Shakespeare |
-| `0100100010` | Amelia Earhart |
-| `0100100001` | Albert Einstein |
-| `0101000000` | Genghis Khan |
-
-> If your answer string doesn't match any entry, the result will be: "YOU HAVE NO PERSONALITY".
-
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
 
-- Fork the repository
-- Add more questions or historical figures
-- Improve the UI/UX
-- Submit a pull request
+1. Fork the repository
+2. Add more questions or historical figures
+3. Improve the UI/UX
+4. Add new features (e.g., user accounts, result history)
+5. Submit a pull request
 
-## License
+### Development Guidelines
+
+- Use ES6+ syntax
+- Follow existing code style
+- Comment complex logic
+- Test on multiple devices
+- Ensure accessibility compliance
+
+## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## Contact
+## 👥 Contact
 
 For any questions or suggestions, please open an issue on GitHub or reach out to the repository owner.
 
-Enjoy discovering which historical figure matches your personality!
+---
 
+**Enjoy discovering which historical figure matches your personality!** 🏛️✨

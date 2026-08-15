@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Figure Personality Quiz</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">
+                    <span class="icon">🏛️</span>
+                    Historical Figure Quiz
+                </h1>
+                <p class="header-subtitle">Discover which historical figure matches your personality</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Screen -->
+            <section id="welcome-screen" class="screen active">
+                <div class="welcome-card">
+                    <div class="welcome-icon">✨</div>
+                    <h2>Welcome to the Quiz</h2>
+                    <p>Answer 10 thought-provoking questions to discover which historical figure shares your personality traits.</p>
+                    <div class="info-box">
+                        <h3>How it works:</h3>
+                        <ul>
+                            <li>Answer all 10 yes/no questions honestly</li>
+                            <li>Your answers create a unique personality profile</li>
+                            <li>Match against famous historical figures</li>
+                            <li>Learn about your matching figure</li>
+                        </ul>
+                    </div>
+                    <button id="start-btn" class="btn btn-primary btn-large">
+                        Start Quiz
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Quiz Screen -->
+            <section id="quiz-screen" class="screen">
+                <div class="quiz-container">
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div class="progress-info">
+                            <span class="question-counter">Question <span id="current-question">1</span> of <span id="total-questions">10</span></span>
+                            <span class="progress-percentage"><span id="progress-percent">0</span>%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <!-- Question Card -->
+                    <div class="question-card">
+                        <div class="question-number">Question <span id="q-number">1</span></div>
+                        <h2 id="question-text" class="question-text"></h2>
+                        
+                        <div class="answer-options">
+                            <button class="answer-btn answer-yes" data-answer="yes">
+                                <span class="answer-icon">✓</span>
+                                <span class="answer-text">Yes</span>
+                            </button>
+                            <button class="answer-btn answer-no" data-answer="no">
+                                <span class="answer-icon">✗</span>
+                                <span class="answer-text">No</span>
+                            </button>
+                        </div>
+
+                        <div class="quiz-navigation">
+                            <button id="prev-btn" class="btn btn-secondary" disabled>
+                                <span class="btn-icon">←</span>
+                                Previous
+                            </button>
+                            <button id="next-btn" class="btn btn-primary">
+                                Next
+                                <span class="btn-icon">→</span>
+                            </button>
+                            <button id="submit-btn" class="btn btn-success" style="display: none;">
+                                See Results
+                                <span class="btn-icon">🎯</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Result Screen -->
+            <section id="result-screen" class="screen">
+                <div class="result-container">
+                    <div class="result-card">
+                        <div class="result-header">
+                            <span class="result-icon">🏆</span>
+                            <h2>Your Historical Match</h2>
+                        </div>
+                        
+                        <div id="result-content" class="result-content">
+                            <!-- Dynamic result content will be inserted here -->
+                        </div>
+
+                        <div class="result-actions">
+                            <button id="retake-btn" class="btn btn-primary">
+                                <span class="btn-icon">🔄</span>
+                                Retake Quiz
+                            </button>
+                            <button id="share-btn" class="btn btn-secondary">
+                                <span class="btn-icon">📤</span>
+                                Share Result
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Historical Figure Quiz. Built with modern web technologies.</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
